@@ -62,7 +62,7 @@ venv\Scripts\activate     # Windows
 
 3.Instale as dependências:
 ```bash
-
+pip install -r requirements.txt
 ```
 
 4.Configure o projeto:
