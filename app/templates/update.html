@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="POST">
+    <div class="mb-3">
+        <label for="id_equipe" class="form-label">Equipe</label>
+        <select class="form-select" name="id_equipe" id="id_equipe">
+            {% for equipe in equipes %}
+            <option value="{{ equipe.id }}">{{ equipe.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="id_evento" class="form-label">Evento</label>
+        <select class="form-select" name="id_evento" id="id_evento">
+            {% for evento in eventos %}
+            <option value="{{ evento.id }}">{{ evento.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="pontos" class="form-label">Pontos</label>
+        <input type="number" class="form-control" name="pontos" id="pontos" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar Pontuação</button>
+</form>
+{% endblock %}
